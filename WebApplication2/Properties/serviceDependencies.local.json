@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/Yusandyvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri",
+      "secretStore": null
+    },
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "dbYusandyShoppingCarEntities",
+      "secretStore": "AzureKeyVault"
+    }
+  }
+}

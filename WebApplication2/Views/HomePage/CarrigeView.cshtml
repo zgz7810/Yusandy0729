@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "選購商品";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>選購商品</h2>
+
+
+
+
+<div class="column" align="center">
+    </br>
+
+    @foreach (var item in Model)
+    {
+        string imgName = item.Id + ".jpg";
+        string labelName = item.Name;
+        string Ul = item.Url;
+        <div class=" col-md-4">
+            <div class="img-thumbnail">
+                <img src="~/Images/@imgName" class="img-responsive" />
+            </div>
+            <h4> @Html.ActionLink(labelName, Ul, "Food", null, new { style = "color:black" }) </h4>
+
+        </div>
+    }
+
+   
+</div>

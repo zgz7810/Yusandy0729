@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication2.Models.Orderdetail>
+
+@{
+    ViewBag.Title = "訂單明細";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>訂單明細</h2>
+
+
+<table class="table">
+    <tr>
+        
+        <th>
+            帳戶名稱
+        </th>
+        <th>
+            會員姓名
+        </th>
+
+        <th>
+            價錢
+        </th>
+        <th>
+            數量
+        </th>
+        <th>
+            是否為訂單
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.mAccount)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsApproved)
+        </td>
+       
+    </tr>
+}
+
+</table>

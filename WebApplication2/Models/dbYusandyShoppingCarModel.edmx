@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbYusandyShoppingCarrModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BakeFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ChineseFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ColubiaFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Drink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FranceFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="JapaneseFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MemberData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="mPasswd" Type="nvarchar" MaxLength="50" />
+          <Property Name="mFName" Type="nvarchar" MaxLength="50" />
+          <Property Name="mSex" Type="nvarchar" MaxLength="50" />
+          <Property Name="mPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="mBirthday" Type="date" />
+          <Property Name="mEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="mAddress" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OldFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderGuid" Type="nvarchar" MaxLength="50" />
+          <Property Name="mAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receiver" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Addfess" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orderdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderGuid" Type="nvarchar" MaxLength="50" />
+          <Property Name="mAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kind" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="IsApproved" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SkinFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        
+        <EntityType Name="ThiFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodPacket" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price1" Type="int" />
+          <Property Name="DIY" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price2" Type="int" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="dbYusandyShoppingCarrModelStoreContainer">
+          <EntitySet Name="BakeFood" EntityType="Self.BakeFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChineseFood" EntityType="Self.ChineseFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ColubiaFood" EntityType="Self.ColubiaFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Drink" EntityType="Self.Drink" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FranceFood" EntityType="Self.FranceFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JapaneseFood" EntityType="Self.JapaneseFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemberData" EntityType="Self.MemberData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OldFood" EntityType="Self.OldFood" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orderdetail" EntityType="Self.Orderdetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SkinFood" EntityType="Self.SkinFood" Schema="dbo" store:Type="Tables" />
+         
+          <EntitySet Name="ThiFood" EntityType="Self.ThiFood" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbYusandyShoppingCarrModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BakeFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ChineseFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ColubiaFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Drink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FranceFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="JapaneseFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MemberData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="mAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mPasswd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mFName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mSex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mBirthday" Type="DateTime" Precision="0" />
+          <Property Name="mEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OldFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OrderGuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Receiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Addfess" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Orderdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OrderGuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="IsApproved" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SkinFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ThiFood">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FoodPacket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price1" Type="Int32" />
+          <Property Name="DIY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price2" Type="Int32" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dbYusandyShoppingCarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BakeFood" EntityType="Self.BakeFood" />
+          <EntitySet Name="ChineseFood" EntityType="Self.ChineseFood" />
+          <EntitySet Name="ColubiaFood" EntityType="Self.ColubiaFood" />
+          <EntitySet Name="Drink" EntityType="Self.Drink" />
+          <EntitySet Name="FranceFood" EntityType="Self.FranceFood" />
+          <EntitySet Name="JapaneseFood" EntityType="Self.JapaneseFood" />
+          <EntitySet Name="MemberData" EntityType="Self.MemberData" />
+          <EntitySet Name="OldFood" EntityType="Self.OldFood" />
+          <EntitySet Name="Order" EntityType="Self.Order" />
+          <EntitySet Name="Orderdetail" EntityType="Self.Orderdetail" />
+          <EntitySet Name="SkinFood" EntityType="Self.SkinFood" />
+          <EntitySet Name="ThiFood" EntityType="Self.ThiFood" />
+          <EntitySet Name="sysdiagrams" EntityType="dbYusandyShoppingCarrModel.sysdiagrams" />
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbYusandyShoppingCarrModelStoreContainer" CdmEntityContainer="dbYusandyShoppingCarEntities">
+          <EntitySetMapping Name="BakeFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.BakeFood">
+              <MappingFragment StoreEntitySet="BakeFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChineseFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.ChineseFood">
+              <MappingFragment StoreEntitySet="ChineseFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ColubiaFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.ColubiaFood">
+              <MappingFragment StoreEntitySet="ColubiaFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Drink">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.Drink">
+              <MappingFragment StoreEntitySet="Drink">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FranceFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.FranceFood">
+              <MappingFragment StoreEntitySet="FranceFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JapaneseFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.JapaneseFood">
+              <MappingFragment StoreEntitySet="JapaneseFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MemberData">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.MemberData">
+              <MappingFragment StoreEntitySet="MemberData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="mAccount" ColumnName="mAccount" />
+                <ScalarProperty Name="mPasswd" ColumnName="mPasswd" />
+                <ScalarProperty Name="mFName" ColumnName="mFName" />
+                <ScalarProperty Name="mSex" ColumnName="mSex" />
+                <ScalarProperty Name="mPhone" ColumnName="mPhone" />
+                <ScalarProperty Name="mBirthday" ColumnName="mBirthday" />
+                <ScalarProperty Name="mEmail" ColumnName="mEmail" />
+                <ScalarProperty Name="mAddress" ColumnName="mAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OldFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.OldFood">
+              <MappingFragment StoreEntitySet="OldFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderGuid" ColumnName="OrderGuid" />
+                <ScalarProperty Name="mAccount" ColumnName="mAccount" />
+                <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Addfess" ColumnName="Addfess" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orderdetail">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.Orderdetail">
+              <MappingFragment StoreEntitySet="Orderdetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderGuid" ColumnName="OrderGuid" />
+                <ScalarProperty Name="mAccount" ColumnName="mAccount" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Kind" ColumnName="Kind" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SkinFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.SkinFood">
+              <MappingFragment StoreEntitySet="SkinFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntityType Name="sysdiagrams">
+            <Key>
+              <PropertyRef Name="diagram_id" />
+            </Key>
+            <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+            <Property Name="principal_id" Type="int" Nullable="false" />
+            <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+            <Property Name="version" Type="int" />
+            <Property Name="definition" Type="varbinary(max)" />
+          </EntityType>
+          
+          
+          <EntitySetMapping Name="ThiFood">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.ThiFood">
+              <MappingFragment StoreEntitySet="ThiFood">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FoodPacket" ColumnName="FoodPacket" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="DIY" ColumnName="DIY" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+
+         
+          
+          
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="dbYusandyShoppingCarrModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

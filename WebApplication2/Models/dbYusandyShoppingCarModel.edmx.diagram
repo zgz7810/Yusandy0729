@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5989dd202c5849839ae2c0652a0cbdf6" Name="Diagram1">
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.BakeFood" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.ChineseFood" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.ColubiaFood" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.Drink" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.FranceFood" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.JapaneseFood" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.MemberData" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.OldFood" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.Order" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.Orderdetail" Width="1.5" PointX="1.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.SkinFood" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.ThiFood" Width="1.5" PointX="3.375" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbYusandyShoppingCarrModel.sysdiagrams" Width="1.5" PointX="5.625" PointY="8.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
